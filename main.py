@@ -1,13 +1,7 @@
 class BaseCharater():
-    def __init__(self, name: str, pos_x: int, pos_y: int,
-                 is_live: bool) -> None:
-        self.name = name
-        self.pos_x = pos_x
-        self.pos_y = pos_y
-        self.is_live = is_live
+    def __init__(self, name = 'Karl', is_live = True) -> None:
+        self.__name = name
+        self.__is_live = is_live
     
     def __str__(self) -> str:
-        return self.name + ' ' + str(self.is_live)
-    
-    def __repr__(self) -> str:
-        return self.name
+        return self.__name + ' live = ' + str(self.__is_live)
